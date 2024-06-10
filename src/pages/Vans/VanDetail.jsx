@@ -2,9 +2,13 @@ import React from "react"
 import { Link, useParams, useLocation } from "react-router-dom"
 import { getVans } from "../../api"
 
+
 export default function VanDetail() {
-    const params = useParams()
     const [van, setVan] = React.useState(null)
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState(null)
+    const { id } = useParams()
+    const location = useLocation()
 
     React.useEffect(() => {
         fetch(`/api/vans/${params.id}`)
