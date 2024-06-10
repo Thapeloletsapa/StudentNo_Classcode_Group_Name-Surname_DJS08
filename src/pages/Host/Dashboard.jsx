@@ -35,7 +35,7 @@ export default function Dashboard() {
     }
 
     if (loading) {
-         return <h1>Loading...</h1>
+        return <h1>Loading...</h1>
      }
 
     if (error) {
@@ -76,9 +76,9 @@ export default function Dashboard() {
                         </>
                     )
                 }
-                <React.Suspense fallback={<h3>Loading...</h3>}>
+                {<React.Suspense fallback={<h3>Loading...</h3>}>
                     <Await resolve={loaderData.vans}>{renderVanElements}</Await>
-                </React.Suspense>
+                </React.Suspense>}
             </section>
         </>
     )
