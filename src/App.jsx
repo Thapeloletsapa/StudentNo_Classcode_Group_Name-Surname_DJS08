@@ -19,6 +19,8 @@ import Layout from "./components/Layout"
 import HostLayout from "./components/HostLayout"
 import AuthRequired from "./components/AuthRequired"
 
+import "./server"
+
 function App() {
 
   return (
