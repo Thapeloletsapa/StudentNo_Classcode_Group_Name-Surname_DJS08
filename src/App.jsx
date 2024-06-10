@@ -1,4 +1,4 @@
-//import React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom"
 import Home from "./pages/Home"
@@ -55,8 +55,8 @@ function App() {
     </BrowserRouter>
   )
 }
-ReactDOM
-  .createRoot(document.getElementById('root'))
-  .render(<App />);
+// ReactDOM
+//   .createRoot(document.getElementById('root'))
+//   .render(<App />);
 
 export default App
