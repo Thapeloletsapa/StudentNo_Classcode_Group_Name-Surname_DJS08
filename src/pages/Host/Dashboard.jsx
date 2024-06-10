@@ -1,4 +1,4 @@
-//import React from "react"
+import React from "react"
 import { Link } from "react-router-dom"
 import { BsStarFill } from "react-icons/bs"
 import { getHostVans } from "../../api"
@@ -33,6 +33,7 @@ export default function Dashboard() {
             </div>
         )
     }
+
     if (loading) {
          return <h1>Loading...</h1>
      }
