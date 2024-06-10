@@ -1,10 +1,10 @@
 //import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom"
-import Home from "./pages/home"
-import About from "./pages/about"
-import Vans from "./pages/Vans/vans"
-import VanDetail from "./pages/Vans/vanDetail"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Vans from "./pages/Vans/Vans"
+import VanDetail from "./pages/Vans/VanDetail"
 import Login from "./pages/Login"
 import Dashboard from "./pages/Host/Dashboard"
 import Income from "./pages/Host/Income"
@@ -15,7 +15,7 @@ import HostVanInfo from "./pages/Host/HostVanInfo"
 import HostVanPricing from "./pages/Host/HostVanPricing"
 import HostVanPhotos from "./pages/Host/HostVanPhotos"
 import NotFound from "./pages/NotFound"
-import Layout from "./components/Layout"
+import Layout from "./components/layout"
 import HostLayout from "./components/HostLayout"
 import AuthRequired from "./components/AuthRequired"
 
