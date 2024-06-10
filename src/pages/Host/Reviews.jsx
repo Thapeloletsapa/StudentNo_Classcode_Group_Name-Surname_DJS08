@@ -1,4 +1,4 @@
-//import React from "react"
+import React from "react"
 import { BsStarFill } from "react-icons/bs"
 
 export default function Reviews() {
@@ -18,6 +18,7 @@ export default function Reviews() {
             id: "2",
         },
     ]
+    
     return (
         <section className="host-reviews">
             <div className="top-text">
