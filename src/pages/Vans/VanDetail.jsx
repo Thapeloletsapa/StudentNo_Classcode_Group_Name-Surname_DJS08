@@ -26,10 +26,26 @@ export default function VanDetail() {
     }, [id])
 
 
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
+    
+    if (error) {
+        return <h1>There was an error: {error.message}</h1>
+    }
+
+    const search = location.state?.search || "";
+    const type = location.state?.type || "all";
     
     return (
         <div className="van-detail-container">
-            {van ? (
+            <Link
+                to={`..${search}`}
+                relative="path"
+                className="back-button"
+            >&larr; <span>Back to {type} vans</span></Link>
+            
+            {van && (
                 <div className="van-detail">
                     <img src={van.imageUrl} />
                     <i className={`van-type ${van.type} selected`}>
@@ -40,7 +56,7 @@ export default function VanDetail() {
                     <p>{van.description}</p>
                     <button className="link-button">Rent this van</button>
                 </div>
-            ) : <h2>Loading...</h2>}
+            )}
         </div>
     )
 }
