@@ -38,3 +38,21 @@ export default function Vans() {
                 }
             }
     
+            function handleFilterChange(key, value) {
+                setSearchParams(prevParams => {
+                    if (value === null) {
+                        prevParams.delete(key)
+                    } else {
+                        prevParams.set(key, value)
+                    }
+                    return prevParams
+                })
+            }
+        
+            if (loading) {
+                return <h1>Loading...</h1>
+            }
+            
+            if (error) {
+                return <h1>There was an error: {error.message}</h1>
+            }
