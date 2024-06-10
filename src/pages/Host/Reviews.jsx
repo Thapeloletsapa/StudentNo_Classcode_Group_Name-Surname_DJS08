@@ -18,3 +18,35 @@ export default function Reviews() {
             id: "2",
         },
     ]
+    return (
+        <section className="host-reviews">
+            <div className="top-text">
+                <h2>Your reviews</h2>
+                <p>
+                    Last <span>30 days</span>
+                </p>
+            </div>
+            <img
+                className="graph"
+                src="src/assets/images/reviews-graph.png"
+                alt="Review graph"
+            />
+            <h3>Reviews (2)</h3>
+            {reviewsData.map((review) => (
+                <div key={review.id}>
+                    <div className="review">
+                        {[...Array(review.rating)].map((_, i) => (
+                            <BsStarFill className="review-star" key={i} />
+                        ))}
+                        <div className="info">
+                            <p className="name">{review.name}</p>
+                            <p className="date">{review.date}</p>
+                        </div>
+                        <p>{review.text}</p>
+                    </div>
+                    <hr />
+                </div>
+            ))}
+        </section>
+    )
+}
