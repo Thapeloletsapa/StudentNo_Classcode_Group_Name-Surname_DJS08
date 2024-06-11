@@ -19,14 +19,24 @@ import HostVanPhotos from "./pages/Host/HostVanPhotos.jsx";
 import NotFound from "./pages/NotFound"
 import AuthRequired from "./components/AuthRequired"
 
+
+/* Setup and Basic Configuration of React Router
+React Router is a popular library used in React applications to manage client-side routing.
+ It allows us to navigate between different pages or views within our application without requiring a full page reload. 
+ To set up React Router, we use the BrowserRouter component, which wraps our entire application. 
+ Inside the BrowserRouter, we define our routes using the <Routes> and <Route> components.
+The <Routes> component is used to define a collection of routes, while the <Route> component is used to define a single route.
+ We can think of routes as a mapping between a URL and a component to render.
+ */
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter>                                              
       <Routes>
       <Route path="/" element={<Layout />}>
           
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route path="about" element={<About />} />        //In this example, we have two routes: one for the home page and one for the about page.//
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
           <Route

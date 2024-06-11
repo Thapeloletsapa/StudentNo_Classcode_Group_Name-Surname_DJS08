@@ -6,7 +6,16 @@ export default function VanDetail() {
     const [van, setVan] = React.useState(null)
     const [loading, setLoading] = React.useState(false)
     const [error, setError] = React.useState(null)
-    const { id } = useParams()
+    
+    /* Application of Route Parameters and Nested Routes
+Route parameters are a way to capture dynamic values in our URLs. 
+For example, if we want to display a user's profile page, we might use a route like /users/:id. The :id part is a route parameter,
+ which we can access using the useParams() hook.
+Nested routes are a way to define routes within routes. 
+This is useful when we have a complex navigation structure,
+ such as a dashboard with multiple sections.*/
+
+    const { id } = useParams()                       
     const location = useLocation()
 
     React.useEffect(() => {

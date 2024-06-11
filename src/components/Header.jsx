@@ -2,6 +2,11 @@
 import imageUrl from "../assets/images/avatar-icon.png"
 import { Link, NavLink } from "react-router-dom"
 
+//The <Link> component is used to create links between routes. 
+//It's a way to navigate between pages within our application. For example:
+
+
+
 export default function Header() {
     const activeStyles = {
         fontWeight: "bold",
